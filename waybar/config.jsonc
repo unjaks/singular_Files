@@ -1,0 +1,123 @@
+{
+
+  // main [1]
+  "layer": "top",
+  "height": 20,
+  "spacing": 8,
+  "margin-left": 10,
+  "margin-right": 10,
+  "margin-top": 10,
+  "position": "top",
+  "fixed-center": true,
+	"reload_style_on_change": true,
+
+  // module positions [2]
+  "modules-left": [
+    "hyprland/workspaces",
+    "mpris"
+  ],
+
+  "modules-center": [
+    "hyprland/window"
+  ],
+
+  "modules-right": [
+    "hyprland/language",
+    "custom/separator",
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "custom/separator",
+    "clock"
+  ],
+
+  // module spisifik cumfiguration [3]
+  "hyprland/workspaces": {
+    "format": "[{name}] {windows}",
+    "window-rewrite": {
+      "class<firefox>": "brew",
+      "class<kitty>": "meow",
+      "class<spotify>": "mouth",
+      "class<vesktop>": "predators",
+      "title<steam>": "abuse",
+			"title<alacritty>": "type",
+      "class<RobloxPlayerBeta.exe>": "scam",
+      "class<com.obsproject.Studio>": "boob"
+    },
+    "window-rewrite-default": "*",
+    "format-window-separator": ","
+    /*"format-icons": {
+      //"active": "1",
+      //"default": "0"
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V"
+    },
+    "persistent-workspaces": {
+      "*": 5
+    }*/
+  },
+
+  "clock": {
+    "format": "{:%I:%M %p}"
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5, // %, can be a float
+    "format": "{volume}%",
+    "format-muted": "MUTE",
+    "format-source": "{volume}",
+    "format-source-muted": "",
+    "on-click": "pavucontrol"
+  },
+
+  "hyprland/language": {
+    "format-en": "en",
+    "format-ru": "ru"
+  },
+
+  "cpu": {
+    "states": {
+      "warning": 50,
+      "critical": 90
+    },
+    "interval": 1
+  },
+
+  "memory": {
+    "states": {
+      "warning": 50,
+      "critical": 80
+    }
+  },
+
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "vertical"
+  },
+
+  "cava": {
+    //"cava_config": "/home/unjak/.config/cava/config",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+    "bar_delimiter": 0,
+    "bars": 8
+  },
+
+  "mpris": {
+    "player": "spotify",
+    "format": " |  {artist} - {title}",
+    "interval": 1
+  },
+
+  "custom/separator": {
+    "format": " | "
+  },
+
+  "hyprland/window": {
+    "format": "{initialClass}"
+  }
+
+}
